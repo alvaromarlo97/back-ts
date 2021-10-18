@@ -1,8 +1,8 @@
-const crypto = require('crypto');
-const knex = require('../db/knex');
+const cryptoP = require('crypto');
+const knex = require('../db/knex.ts');
 
 function createUser(user) {
-  const hash = crypto.createHmac('sha256', user.password).digest('hex');
+  const hash = cryptoP.createHmac('sha256', user.password).digest('hex');
   return knex('users').insert({
     username: user.username,
     password: hash,

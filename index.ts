@@ -1,5 +1,5 @@
 const express = require('express'); // Middleware express
-const user = require('./src/controllers/user');
+const user = require('./src/controllers/user.ts');
 
 const server = express();
 const port = 5000;

@@ -1,6 +1,6 @@
-const knex = require('knex');
+const knexS = require('knex');
 
-const connectedKnex = knex({
+const connectedKnex = knexS({
   client: 'sqlite3',
   connection: {
     filename: 'user.sqlite3',
