@@ -7,9 +7,8 @@ const port = 5000;
 server.use(express.json()); // Si viene petición con datos .json los añade en el body
 
 server.post('/user', async ({ body }, res) => {
-  const createdUser = await user(body);
-  res.status(200).send('El usuario se creó correctamente');
-  res.json(createdUser);
+  await user(body);
+  res.status(200).send({ status: 200, message: 'El usuario se creó correctamente' });
 });
 
 server.listen(
