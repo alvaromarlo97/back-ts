@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-const knex = requiere('knex');
+const knex = require('knex');
 
 const connectedKnex = knex({
   client: 'sqlite3',
